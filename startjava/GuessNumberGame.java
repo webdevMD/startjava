@@ -1,6 +1,6 @@
 import java.lang.Math;
 
-public class GuessTheNumberGame {
+public class GuessNumberGame {
     public static void main(String[] args) {
         int targetNumber = (int) (Math.random() * 100);
         System.out.println("Компьютер загадывает число от 0 до 100");
@@ -12,8 +12,8 @@ public class GuessTheNumberGame {
             } else if (i > targetNumber) {
                 System.out.println("Введенное вами число больше того, что загадал компьютер");
             } else {
-            System.out.println("Вы угадали!");
-            break;
+                System.out.println("Вы угадали!");
+                break;
             }
         }
     }
