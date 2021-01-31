@@ -1,9 +1,7 @@
 public class Wolf {
-    boolean man = true;
-    String nickname = "Silver";
-    int weight = 23;
-    int age = 5;
-    String color = "gray";
+    boolean man;
+    String nickname, color;
+    int weight, age;
 
     void go() {
 
