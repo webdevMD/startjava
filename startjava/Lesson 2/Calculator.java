@@ -2,7 +2,6 @@ public class Calculator {
     private int firstNumber;
     private int secondNumber;
     private char sign;
-    private String answer;
 
     public int getFirstNumber() {
         return firstNumber;
@@ -25,6 +24,10 @@ public class Calculator {
     }
 
     void setSign(char sign) {
+        this.sign = sign;
+    }
+
+    public void consider() {
         switch(sign) {
             case '+' :
                 System.out.println(firstNumber + secondNumber);
@@ -49,15 +52,6 @@ public class Calculator {
                 System.out.println(firstNumber % secondNumber);
                 break;
             default:
-                this.sign = sign;
         }
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    void setAnswer(String answer) {
-        this.answer = answer;
     }
 }
