@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CalculatorTestotkat {
+public class CalculatorTest {
     public static void main(String[] args) {
         boolean proceed = true;
         String answer;
