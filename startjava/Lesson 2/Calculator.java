@@ -3,25 +3,25 @@ public class Calculator {
     private int secondNumber;
     private char sign;
 
-    public int getFirstNumber() {
-        return firstNumber;
-    }
+    //public int getFirstNumber() {
+    //    return firstNumber;
+    //}
 
     void setFirstNumber(int firstNumber) {
         this.firstNumber = firstNumber;
     }
 
-    public int getSecondNumber() {
-        return secondNumber;
-    }
+    //public int getSecondNumber() {
+    //    return secondNumber;
+    //}
 
     void setSecondNumber(int secondNumber) {
         this.secondNumber = secondNumber;
     }
 
-    public char getSign() {
-        return sign;
-    }
+    //public char getSign() {
+    //    return sign;
+    //}
 
     void setSign(char sign) {
         this.sign = sign;
@@ -52,6 +52,7 @@ public class Calculator {
                 System.out.println(firstNumber % secondNumber);
                 break;
             default:
+                System.out.println("unknown function");
         }
     }
 }
