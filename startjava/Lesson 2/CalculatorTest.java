@@ -18,10 +18,9 @@ public class CalculatorTest {
             int secondNumber = scanner.nextInt();
             calculator.setSecondNumber(secondNumber);
             calculator.consider();
-            String answer;
             while (true) {
                 System.out.println("Хотите продолжить вычисления? [no/yes]: ");
-                answer = scanner.nextLine();
+                String answer = scanner.nextLine();
                 if (option[0].equals(answer)){
                     right = false;
                     break;
