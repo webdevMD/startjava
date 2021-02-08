@@ -6,7 +6,7 @@ public class CalculatorTest {
         boolean right = true;
 
         Calculator calculator = new Calculator();
-        while (right) {
+        while (true) {
             System.out.print("Введите первое число: ");
             Scanner scanner = new Scanner(System.in);
             int firstNumber = scanner.nextInt();
@@ -18,17 +18,15 @@ public class CalculatorTest {
             int secondNumber = scanner.nextInt();
             calculator.setSecondNumber(secondNumber);
             calculator.calculate();
-            while (true) {
+            String answer;
+            do {
                 System.out.println("Хотите продолжить вычисления? [no/yes]: ");
-                String answer = scanner.nextLine();
-                if (option[0].equals(answer)){
-                    right = false;
-                    break;
-                }
-                if (option[1].equals(answer)){
-                    right = true;
-                    break;
-                }
+                scanner.nextLine();
+                answer = scanner.nextLine();
+            } while (!option[0].equals(answer) && !option[1].equals(answer));
+            if (option[0].equals(answer)){
+                right = false;
+                break;
             }
         }
     }
