@@ -1,27 +1,19 @@
 public class JaegerTest {
     public static void main(String[] args) {
-        Jaeger jaegerOne = new Jaeger();
-        Jaeger jaegerTwo = new Jaeger();
-        jaegerOne.setModelName("Crimson Typhoon");
+        Jaeger jaegerOne = new Jaeger("Crimson Typhoon", "China", 250f, 8);
+        Jaeger jaegerTwo = new Jaeger("Coyote Tango", "Japan", 280f, 7);
         System.out.println("modelName jaegerOne = " + jaegerOne.getModelName());
-        jaegerTwo.setModelName("Coyote Tango");
         System.out.println("modelName jaegerTwo = " + jaegerTwo.getModelName());
-        jaegerOne.setOrigin("China");
-        System.out.println("modelName jaegerOne = " + jaegerOne.getOrigin());
-        jaegerTwo.setOrigin("Japan");
-        System.out.println("modelName jaegerTwo = " + jaegerTwo.getOrigin());
-        jaegerOne.setHeight(250f);
-        System.out.println("modelName jaegerOne = " + jaegerOne.getHeight());
-        jaegerOne.setHeight(300f);
-        System.out.println("modelName jaegerOne = " + jaegerOne.getHeight());
-        jaegerTwo.setHeight(280f);
-        System.out.println("modelName jaegerTwo = " + jaegerTwo.getHeight());
-        jaegerOne.setStrength(8);
-        System.out.println("modelName jaegerOne = " + jaegerOne.getStrength());
+        System.out.println("jaegerOne made in = " + jaegerOne.getOrigin());
+        System.out.println("jaegerTwo made in = " + jaegerTwo.getOrigin());
+        System.out.println("height jaegerOne = " + jaegerOne.getHeight());
+        jaegerOne.setHeight(270f);
+        System.out.println("height jaegerOne = " + jaegerOne.getHeight());
+        System.out.println("height jaegerTwo = " + jaegerTwo.getHeight());
+        System.out.println("strength jaegerOne = " + jaegerOne.getStrength());
         jaegerOne.setStrength(10);
         System.out.println("modelName jaegerOne = " + jaegerOne.getStrength());
-        jaegerTwo.setStrength(7);
-        System.out.println("modelName jaegerTwo = " + jaegerTwo.getStrength());
+        System.out.println("strength jaegerTwo = " + jaegerTwo.getStrength());
         jaegerOne.pilots();
         System.out.println(jaegerTwo.pilots());
         jaegerOne.move();
