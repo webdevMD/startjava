@@ -4,20 +4,19 @@ public class Jaeger {
     private float height;
     private int strength;
 
+    public Jaeger(String modelName, String origin, float height, int strength){
+        this.modelName = modelName;
+        this.origin = origin;
+        this.height = height;
+        this.strength = strength;
+    }
+
     public String getModelName() {
         return modelName;
     }
 
-    void setModelName(String modelName) {
-        this.modelName = modelName;
-    }
-
     public String getOrigin() {
         return origin;
-    }
-
-    void setOrigin(String origin) {
-        this.origin = origin;
     }
 
     public float getHeight() {
