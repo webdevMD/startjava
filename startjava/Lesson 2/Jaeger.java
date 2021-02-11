@@ -4,7 +4,7 @@ public class Jaeger {
     private float height;
     private int strength;
 
-    public Jaeger(String modelName, String origin, float height, int strength){
+    public Jaeger(String modelName, String origin, float height, int strength) {
         this.modelName = modelName;
         this.origin = origin;
         this.height = height;
@@ -35,7 +35,7 @@ public class Jaeger {
         this.strength = strength;
     }
 
-    public boolean pilots() {
+    public boolean piloting() {
         System.out.println("Вами управляют пилоты");
         return true;
     }
@@ -48,7 +48,7 @@ public class Jaeger {
         return "nothing";
     }
 
-    public void bodyLanguage() {
+    public void striking() {
         System.out.println("Вы нанесли 5 ударов");
     }
 }
