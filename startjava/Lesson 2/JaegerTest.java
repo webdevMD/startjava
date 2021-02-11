@@ -14,13 +14,13 @@ public class JaegerTest {
         jaegerOne.setStrength(10);
         System.out.println("modelName jaegerOne = " + jaegerOne.getStrength());
         System.out.println("strength jaegerTwo = " + jaegerTwo.getStrength());
-        jaegerOne.pilots();
-        System.out.println(jaegerTwo.pilots());
+        jaegerOne.piloting();
+        System.out.println(jaegerTwo.piloting());
         jaegerOne.move();
         jaegerTwo.move();
         jaegerOne.scanKaiju();
         jaegerTwo.scanKaiju();
-        jaegerOne.bodyLanguage();
-        jaegerTwo.bodyLanguage();
+        jaegerOne.striking();
+        jaegerTwo.striking();
     }
 }
