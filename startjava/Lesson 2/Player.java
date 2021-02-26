@@ -1,14 +1,17 @@
 public class Player {
     private String name;
-    int number;
+    private int number;
 
-    public Player(String name){
+    public Player(String name) {
         this.name = name;
-        //this.number = number;
     }
 
     public String getName() {
         return name;
+    }
+
+    void setName(String name) {
+        this.name = name;
     }
 
     public int getNumber() {
@@ -17,10 +20,5 @@ public class Player {
 
     void setNumber(int number) {
         this.number = number;
-    }
-
-    public void guess() {
-        number = (int) (Math.random() * 100);
-        //System.out.println("игрок ввел число " + number);
     }
 }
