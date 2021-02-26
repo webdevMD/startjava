@@ -1,56 +1,51 @@
-import java.lang.Math;
-import GuessNumberTest.proceed;
+import java.util.Scanner;
 
 public class GuessNumber {
-    
-    Player playerOne;
-    Player playerTwo;
+    private Player playerOne;
+    private Player playerTwo;
+
+    boolean numberOneRight = false;
+    boolean numberTwoRight = false;
+
+    int answerNumber1 = 0;
+    int answerNumber2 = 0;
 
     public void startGame() {
-        int optionFirstPlayer = 0;
-        int optionSecondPlayer = 0;
-        boolean optionFirstRight = false;
-        boolean optionSecondRight = false;
-        int targetNumber = (int) (Math.random() * 100);
-        
-        while (true) {
-            System.out.println("комп загадал " + targetNumber);
-            playerOne.guess();
-            playerTwo.guess();
+    int targetNumber = (int) (Math.random() * 100);
+    System.out.println("комп загадал " + targetNumber);
 
-            optionFirstPlayer = playerOne.number;
-            System.out.println("первый игрок думает, что это " + optionFirstPlayer);
-            if (optionFirstPlayer < targetNumber) {
-                System.out.println("Введенное вами число меньше того, что загадал компьютер");
-            } else if (optionFirstPlayer > targetNumber) {
-                System.out.println("Введенное вами число больше того, что загадал компьютер");
-            }
+    System.out.println("playerOne введите число: ");
+    Scanner number = new Scanner(System.in);
+    int answerNumber1 = number.nextInt();
+    playerOne.setNumber(answerNumber1);
+    System.out.println("number playerOne = " + playerOne.getNumber());
+        if (answerNumber1 < targetNumber) {
+            System.out.println("Введенное вами число меньше того, что загадал компьютер");
+        } else if (answerNumber1 > targetNumber) {
+            System.out.println("Введенное вами число больше того, что загадал компьютер");
+        }
 
-            optionSecondPlayer = playerTwo.number;
-            System.out.println("второй игрок думает, что это " + optionSecondPlayer);
-            if (optionSecondPlayer < targetNumber) {
-                System.out.println("Введенное вами число меньше того, что загадал компьютер");
-            } else if (optionSecondPlayer > targetNumber) {
-                System.out.println("Введенное вами число больше того, что загадал компьютер");
-            }
+    System.out.println("playerTwo введите число: ");
+    int answerNumber2 = number.nextInt();
+    playerTwo.setNumber(answerNumber2);
+    System.out.println("number playerTwo = " + playerTwo.getNumber());
+        if (answerNumber2 < targetNumber) {
+            System.out.println("Введенное вами число меньше того, что загадал компьютер");
+        } else if (answerNumber2 > targetNumber) {
+            System.out.println("Введенное вами число больше того, что загадал компьютер");
+        }
 
-            if (optionFirstPlayer == targetNumber) {
-                optionFirstRight = true;
-            }
-            if (optionSecondPlayer == targetNumber) {
-                optionSecondRight = true;
-            }
+        if (answerNumber1 == targetNumber) {
+            numberOneRight = true;
+        }
+        if (answerNumber2 == targetNumber) {
+            numberTwoRight = true;
+        }
 
-            if (optionFirstRight || optionSecondRight) {
-                System.out.println("Первый игрок угадал?" + optionFirstRight);
-                System.out.println("Второй игрок угадал?" + optionSecondRight);
-                
-                break;
-            } else { 
-                playerOne.proceed();
-            }
-        
+        if (numberOneRight || numberTwoRight) {
+            System.out.println("Первый игрок угадал?" + numberOneRight);
+            System.out.println("Второй игрок угадал?" + numberTwoRight);
+            //break;
         }
     }
-    
 }
