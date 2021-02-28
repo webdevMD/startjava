@@ -31,7 +31,6 @@ public class GuessNumber {
         if (answerNumber1 == targetNumber) {
             numberOneRight = true;
         }
-        
 
         System.out.println("playerTwo введите число: ");
         int answerNumber2 = inNumber.nextInt();
