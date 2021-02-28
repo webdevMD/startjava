@@ -10,10 +10,6 @@ public class Player {
         return name;
     }
 
-    void setName(String name) {
-        this.name = name;
-    }
-
     public int getNumber() {
         return number;
     }
